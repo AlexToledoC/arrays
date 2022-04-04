@@ -3,15 +3,13 @@ Autor: Alejandro Toledo Cuenca
 Fecha de creaci�n: 30/03/2022
 Descripci�n: simular las reservaciones del hotel boutique */
 
-#include <conio.h>
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
+
 
 using namespace std; 
 int main(), i, seleccion, personas, habitacion, funcion_cobro(), doble[3],
 subtotal, dias, total, sencilla[5], lujo[2],
-contador_sencilla, contador_doble, contador_lujo, funcion_otra_reserva();//funcion_reserva();
+contador_sencilla, contador_doble, contador_lujo, funcion_otra_reserva();
 double iva;
 string otra_operacion;
 
@@ -19,7 +17,7 @@ int funcion_cobro(int subtotal)
 {
 	cout << "Cuantos d�as va a reservar? \n";
 	cin >> dias;
-	cout << "Subtotal a pagar: $" << subtotal << "\n";
+	cout << "Subtotal a pagar: $" << subtotal * dias << "\n";
 	iva = subtotal * .16;
 	cout << "IVA: $" << iva << "\n";
 	total = subtotal + iva;
