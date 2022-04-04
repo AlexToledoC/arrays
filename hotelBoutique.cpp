@@ -7,8 +7,8 @@ Descripcion: simular las reservaciones del hotel boutique */
 #include <conio.h>
 
 using namespace std; 
-int main(), i, seleccion, personas, habitacion, funcion_cobro(), doble[3],
-subtotal, subtotal2, subtotal3, dias, total, sencilla[5], lujo[2],
+int main(), seleccion, personas, funcion_cobro(), doble[3],
+subtotal, subtotal2, subtotal3, dias, sencilla[5], lujo[2],
 disponible_sencilla = 5, disponible_doble = 3, disponible_lujo = 2,
 contador_sencilla, contador_doble, contador_lujo, funcion_otra_reserva();
 double iva;
@@ -132,7 +132,7 @@ int main()
 			}
 		case 4:
 			{
-				printf("Gracias por su visita");
+				printf("Gracias por su visita. ");
 				break;
 			}
 		default:
