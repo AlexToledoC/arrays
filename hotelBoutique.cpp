@@ -8,7 +8,7 @@ Descripci�n: simular las reservaciones del hotel boutique */
 
 using namespace std; 
 int main(), i, seleccion, personas, habitacion, funcion_cobro(), doble[3],
-subtotal, dias, total, sencilla[5], lujo[2],
+subtotal, subtotal2, dias, total, sencilla[5], lujo[2],
 contador_sencilla, contador_doble, contador_lujo, funcion_otra_reserva();
 double iva;
 string otra_operacion;
@@ -17,10 +17,11 @@ int funcion_cobro(int subtotal)
 {
 	cout << "Cuantos d�as va a reservar? \n";
 	cin >> dias;
-	cout << "Subtotal a pagar: $" << subtotal * dias << "\n";
-	iva = subtotal * .16;
+	subtotal2 = subtotal * dias;
+	cout << "Subtotal a pagar: $" << subtotal2 << "\n";
+	iva = subtotal2 * .16;
 	cout << "IVA: $" << iva << "\n";
-	total = subtotal + iva;
+	total = subtotal2 + iva;
 	cout << "Total a pagar: $" << total;
 }
 
