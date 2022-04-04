@@ -3,14 +3,12 @@ Autor: Alejandro Toledo Cuenca
 Fecha de creaci�n: 30/03/2022
 Descripci�n: simular las reservaciones del hotel boutique */
 
-#include <conio.h>
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
+
 
 using namespace std; 
 int main(), i, seleccion, personas, habitacion, funcion_cobro(), doble[3],
-subtotal, dias, total, sencilla[5], lujo[2],
+subtotal, subtotal2, dias, total, sencilla[5], lujo[2],
 contador_sencilla, contador_doble, contador_lujo, funcion_otra_reserva();//funcion_reserva();
 double iva;
 string otra_operacion;
@@ -19,10 +17,11 @@ int funcion_cobro(int subtotal)
 {
 	cout << "Cuantos días va a reservar? \n";
 	cin >> dias;
-	cout << "Subtotal a pagar: $" << subtotal << "\n";
-	iva = subtotal * .16;
+	subtotal2 = subtotal * dias;
+	cout << "Subtotal a pagar: $" << subtotal2 << "\n";
+	iva = subtotal2 * .16;
 	cout << "IVA: $" << iva << "\n";
-	total = subtotal + iva;
+	total = subtotal2 + iva;
 	cout << "Total a pagar: $" << total;
 }
 
@@ -49,7 +48,7 @@ int main()
 	printf("1. Sencilla (maximo 2 personas).............$2,350.00 \n");
 	printf("2. Doble (maximo 4 personas)................$3,930.00 \n");
 	printf("3. De lujo (maximo 6 personas)..............$9,500.00 \n");
-	cout << "Escoja el tipo de habitacion ingresando el respecitvo número (1-3):\n";
+	cout << "Escoja el tipo de habitacion a reservar ingresando el respecitvo número (1-3):\n";
 	cin >> seleccion;
 	switch(seleccion)
 	{
@@ -78,7 +77,7 @@ int main()
 			}
 		case 2:
 			{
-				if (doble[3] == 1)
+				if (doble[2] == 1)
 				{
 					printf("Ya no hay habitaciones disponibles.");
 				}
